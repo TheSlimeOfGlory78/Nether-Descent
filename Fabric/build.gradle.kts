@@ -39,6 +39,7 @@ dependencies {
     modApi("com.github.glitchfiend:TerraBlender-fabric:$minecraftVersion-${project.properties["terrablender_version"]}")
     modApi("dev.corgitaco:Oh-The-Trees-Youll-Grow-fabric:$minecraftVersion-${project.properties["ohthetreesyoullgrow_version"]}")
     modApi("me.lucko:fabric-permissions-api:0.3.1")
+    modApi("it.crystalnest:prometheus-fabric:1.21-${project.properties["prometheus_version"]}")
 
     modCompileOnly("mcp.mobius.waila:wthit-api:fabric-${project.properties["WTHIT"]}")
     modLocalRuntime("mcp.mobius.waila:wthit:fabric-${project.properties["WTHIT"]}")

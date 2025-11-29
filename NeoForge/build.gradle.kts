@@ -46,6 +46,7 @@ dependencies {
 
     modApi("com.github.glitchfiend:TerraBlender-neoforge:$minecraftVersion-${project.properties["terrablender_version"]}")
     modApi("dev.corgitaco:Oh-The-Trees-Youll-Grow-neoforge:$minecraftVersion-${project.properties["ohthetreesyoullgrow_version"]}")
+    modApi("it.crystalnest:prometheus-neoforge:1.21-${project.properties["prometheus_version"]}")
 
     modCompileOnly("mcp.mobius.waila:wthit-api:neo-${project.properties["WTHIT"]}")
     modLocalRuntime("mcp.mobius.waila:wthit:neo-${project.properties["WTHIT"]}")

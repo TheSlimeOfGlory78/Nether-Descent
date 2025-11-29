@@ -15,5 +15,7 @@ dependencies {
     modCompileOnly("com.github.glitchfiend:TerraBlender-common:$minecraftVersion-${project.properties["terrablender_version"]}")
     modCompileOnly("dev.corgitaco:Oh-The-Trees-Youll-Grow-common:$minecraftVersion-${project.properties["ohthetreesyoullgrow_version"]}")
 
+    modCompileOnly("it.crystalnest:prometheus-common:1.21-${project.properties["prometheus_version"]}")
+
     modCompileOnly("mcp.mobius.waila:wthit-api:fabric-${project.properties["WTHIT"]}")
 }

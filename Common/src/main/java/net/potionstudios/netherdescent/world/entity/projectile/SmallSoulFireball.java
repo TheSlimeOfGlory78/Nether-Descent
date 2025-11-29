@@ -1,5 +1,7 @@
 package net.potionstudios.netherdescent.world.entity.projectile;
 
+import it.crystalnest.prometheus.api.type.FireTyped;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
@@ -16,7 +18,7 @@ import net.potionstudios.netherdescent.world.entity.NetherDescentEntityType;
 import net.potionstudios.netherdescent.world.item.NetherDescentItems;
 import org.jetbrains.annotations.NotNull;
 
-public class SmallSoulFireball extends Fireball {
+public class SmallSoulFireball extends Fireball implements FireTyped {
     public SmallSoulFireball(EntityType<? extends SmallSoulFireball> entityType, Level level) {
         super(entityType, level);
     }
@@ -54,5 +56,10 @@ public class SmallSoulFireball extends Fireball {
 	@Override
 	public @NotNull ItemStack getItem() {
 		return NetherDescentItems.SOUL_FIRE_CHARGE.get().getDefaultInstance();
+	}
+
+	@Override
+	public ResourceLocation getFireType() {
+		return ResourceLocation.withDefaultNamespace("soul");
 	}
 }

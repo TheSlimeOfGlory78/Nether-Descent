@@ -43,6 +43,9 @@ subprojects {
             includeGroup("mcp.mobius.waila")
         }
         maven("https://api.modrinth.com/maven")
+        maven("https://maven.crystalnest.it").content {
+            includeGroup("it.crystalnest")
+        }
     }
 
     @Suppress("UnstableApiUsage")
