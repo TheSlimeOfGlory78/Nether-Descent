@@ -1,5 +1,6 @@
 package net.potionstudios.netherdescent.world.entity.projectile;
 
+import it.crystalnest.prometheus.api.FireManager;
 import it.crystalnest.prometheus.api.type.FireTyped;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
@@ -60,6 +61,6 @@ public class SmallSoulFireball extends Fireball implements FireTyped {
 
 	@Override
 	public ResourceLocation getFireType() {
-		return ResourceLocation.withDefaultNamespace("soul");
+		return FireManager.SOUL_FIRE_TYPE;
 	}
 }

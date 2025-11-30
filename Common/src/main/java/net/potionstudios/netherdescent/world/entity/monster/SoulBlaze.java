@@ -1,5 +1,8 @@
 package net.potionstudios.netherdescent.world.entity.monster;
 
+import it.crystalnest.prometheus.api.FireManager;
+import it.crystalnest.prometheus.api.type.FireTyped;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -17,7 +20,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.EnumSet;
 
-public class SoulBlaze extends Blaze {
+public class SoulBlaze extends Blaze implements FireTyped {
     public SoulBlaze(EntityType<? extends Blaze> entityType, Level level) {
         super(entityType, level);
         this.xpReward = 14;
@@ -36,6 +39,11 @@ public class SoulBlaze extends Blaze {
 
     public static AttributeSupplier.@NotNull Builder createAttributes() {
         return Monster.createMonsterAttributes().add(Attributes.ATTACK_DAMAGE, 6.0F).add(Attributes.MOVEMENT_SPEED, 0.23F).add(Attributes.FOLLOW_RANGE, 30.0F);
+    }
+
+    @Override
+    public ResourceLocation getFireType() {
+        return FireManager.SOUL_FIRE_TYPE;
     }
 
     static class SoulBlazeAttackGoal extends Goal {
